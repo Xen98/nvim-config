@@ -48,5 +48,9 @@ return {
         },
       },
     })
+
+    require("lspconfig").jdtls.setup({
+      on_attach = on_attach,
+    })
   end
 }
