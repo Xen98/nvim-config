@@ -4,6 +4,8 @@ local types = require "luasnip.util.types"
 local M = {}
 
 function M.setup()
+  require("luasnip.loaders.from_vscode").lazy_load()
+
   ls.config.set_config {
     history = true,
     updateevents = "TextChanged, TextChangedI",

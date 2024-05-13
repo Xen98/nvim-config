@@ -19,6 +19,7 @@ return {
       "java",
       "sql",
       "astro",
+      "kotlin"
     },
     highlight = {
       enable = true,
