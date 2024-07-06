@@ -13,6 +13,7 @@ return {
         override_generic_sorter = true, -- override the generic sorter
         override_file_sorter = true,    -- override the file sorter
         case_mode = "smart_case",       -- or "ignore_case" or "respect_case"
+        file_ignore_patterns = {"node%_modules/.*"}
       },
     },
   },
@@ -22,14 +23,14 @@ return {
   end,
   keys = {
     {
-      "<leader>pp",
+      "<leader>gf",
       function()
         require("telescope.builtin").git_files({show_untracked = true})
       end,
       desc = "Telescope Git Files",
     },
     {
-      "<leader>pe",
+      "<leader>tb",
       function()
         require("telescope.builtin").buffers()
       end,
@@ -50,14 +51,14 @@ return {
       desc = "Telescope Git commit in buffer",
     },
     {
-      "<leader>bg",
+      "<leader>gb",
       function()
         require("telescope.builtin").git_branches()
       end,
       desc = "Telescope Git branches",
     },
     {
-      "<leader>rp",
+      "<leader>tp",
       function()
         require("telescope.builtin").find_files({
           prompt_title = "Plugins",
@@ -80,25 +81,25 @@ return {
       desc = "Telescope View plugins",
     },
     {
-      "<leader>pf",
+      "<leader>tf",
       function()
         require("telescope.builtin").find_files()
       end,
       desc = "Telescope Find files",
     },
     {
-      "<leader>ph",
+      "<leader>th",
       function()
         require("telescope.builtin").help_tags()
       end,
       desc = "Telescope Help",
     },
     {
-      "<leader>bb",
+      "<leader>td",
       function()
         require("telescope").extensions.file_browser.file_browser({path = "%:h:p", select_buffer = true})
       end,
       desc = "Telescope File browser",
-    }
+    },
   },
 }

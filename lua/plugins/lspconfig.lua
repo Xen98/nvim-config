@@ -52,5 +52,25 @@ return {
     require("lspconfig").jdtls.setup({
       on_attach = on_attach,
     })
+
+    require("lspconfig").angularls.setup({
+      on_attach = on_attach,
+    })
+
+    require("lspconfig").tsserver.setup({
+      on_attach = on_attach,
+    })
+
+    require("lspconfig").html.setup({
+      on_attach = on_attach,
+    })
+
+    require("lspconfig").cssls.setup({
+      on_attach = on_attach,
+    })
+
+    require("lspconfig").eslint.setup({
+      on_attach = on_attach,
+    })
   end
 }

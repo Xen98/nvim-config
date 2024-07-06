@@ -19,7 +19,9 @@ return {
       "java",
       "sql",
       "astro",
-      "kotlin"
+      "kotlin",
+      "angular",
+      "typescript"
     },
     highlight = {
       enable = true,
