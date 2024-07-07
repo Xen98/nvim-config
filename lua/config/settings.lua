@@ -1,5 +1,6 @@
 vim.o.number = true
 vim.o.relativenumber = true
+vim.o.clipboard = 'unnamedplus'
 vim.opt.termguicolors = true
 
 vim.g.mapleader = " "
@@ -12,5 +13,8 @@ vim.opt.softtabstop = 2
 
 local map = vim.api.nvim_set_keymap
 
-map('v', '<S-y>', '"+y', {noremap = true, silent = false})
-map('n', '<S-y>', '"+gP', {noremap = true, silent = false})
+-- Configuración para copiar al portapapeles
+map('v', '<Leader>y', '"+y', { noremap = true, silent = true })
+
+-- Configuración para pegar desde el portapapeles
+map('n', '<Leader>p', '"+gP', { noremap = true, silent = true })
