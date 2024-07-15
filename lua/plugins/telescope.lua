@@ -101,5 +101,12 @@ return {
       end,
       desc = "Telescope File browser",
     },
+    {
+      "<leader>tg",
+      function()
+        require("telescope.builtin").live_grep()
+      end,
+      desc = "Telescope Live grep",
+    }
   },
 }

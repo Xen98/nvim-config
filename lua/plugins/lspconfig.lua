@@ -5,6 +5,9 @@ return {
     "williamboman/mason-lspconfig.nvim",
     "folke/neodev.nvim",
   },
+  opts = {
+    inlay_hints = { enabled = true }
+  },
   config = function()
     vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
     vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
