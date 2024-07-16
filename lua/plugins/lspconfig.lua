@@ -75,5 +75,13 @@ return {
     require("lspconfig").eslint.setup({
       on_attach = on_attach,
     })
+
+    require("lspconfig").intelephense.setup({
+      on_attach = on_attach,
+    })
+
+    require("lspconfig").sqls.setup({
+      on_attach = on_attach,
+    })
   end
 }

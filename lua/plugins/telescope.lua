@@ -37,6 +37,13 @@ return {
       desc = "Telescope buffers",
     },
     {
+      "<leader>tg",
+      function()
+        require("telescope.builtin").live_grep()
+      end,
+      desc = "Telescope live grep",
+    },
+    {
       "<leader>gs",
       function()
         require("telescope.builtin").git_status()
@@ -101,12 +108,5 @@ return {
       end,
       desc = "Telescope File browser",
     },
-    {
-      "<leader>tg",
-      function()
-        require("telescope.builtin").live_grep()
-      end,
-      desc = "Telescope Live grep",
-    }
   },
 }
