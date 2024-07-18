@@ -38,6 +38,10 @@ return {
       vim.keymap.set('n', '<leader>f', function()
         vim.lsp.buf.format { async = true }
       end, opts)
+
+      vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+        border = "rounded",
+      })
     end
 
     require("neodev").setup()
@@ -78,6 +82,13 @@ return {
 
     require("lspconfig").intelephense.setup({
       on_attach = on_attach,
+      settings = {
+        intelephense = {
+          format = {
+            braces = "k&r"
+          }
+        }
+      }
     })
 
     require("lspconfig").sqls.setup({

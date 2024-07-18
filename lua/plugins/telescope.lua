@@ -30,7 +30,7 @@ return {
       desc = "Telescope Git Files",
     },
     {
-      "<leader>tb",
+      "<leader>tj",
       function()
         require("telescope.builtin").buffers()
       end,
