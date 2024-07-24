@@ -18,3 +18,5 @@ map('v', '<Leader>y', '"+y', { noremap = true, silent = true })
 
 -- Configuración para pegar desde el portapapeles
 map('n', '<Leader>p', '"+gP', { noremap = true, silent = true })
+
+map('n', '<leader>i', ':lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor", border="rounded"})<CR>', { noremap = true, silent = true })

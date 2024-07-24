@@ -4,7 +4,7 @@ return {
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-telescope/telescope-file-browser.nvim",
-    {"nvim-telescope/telescope-fzf-native.nvim", build = "make"}
+    { "nvim-telescope/telescope-fzf-native.nvim", build = "make" }
   },
   opts = {
     extensions = {
@@ -13,7 +13,7 @@ return {
         override_generic_sorter = true, -- override the generic sorter
         override_file_sorter = true,    -- override the file sorter
         case_mode = "smart_case",       -- or "ignore_case" or "respect_case"
-        file_ignore_patterns = {"node%_modules/.*"}
+        file_ignore_patterns = { "node%_modules/.*" }
       },
     },
   },
@@ -21,11 +21,21 @@ return {
     require("telescope").setup(opts)
     require("telescope").load_extension("fzf")
   end,
+  defaults = {
+    mappings = {
+      i = {
+        ["<leader>i"] = require("telescope.actions").select_vertical
+      },
+      n = {
+        ["<leader>i"] = require("telescope.actions").select_vertical
+      }
+    }
+  },
   keys = {
     {
       "<leader>gf",
       function()
-        require("telescope.builtin").git_files({show_untracked = true})
+        require("telescope.builtin").git_files({ show_untracked = true })
       end,
       desc = "Telescope Git Files",
     },
@@ -104,7 +114,7 @@ return {
     {
       "<leader>td",
       function()
-        require("telescope").extensions.file_browser.file_browser({path = "%:h:p", select_buffer = true})
+        require("telescope").extensions.file_browser.file_browser({ path = "%:h:p", select_buffer = true })
       end,
       desc = "Telescope File browser",
     },
